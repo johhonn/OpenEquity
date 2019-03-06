@@ -32,7 +32,7 @@ parametersSet:false,
         },
         value: ''
     },
-    CoinSymbol: {
+    CoinSymbol: { 
         elementType: 'input',
         label: 'symbol',
         elementConfig: {
@@ -213,17 +213,21 @@ handleSubmit2=()=>{
             config: this.state.orderForm[key]
         });
     }
+    // 0 decimals, 1 CoinSymbol 1 CoinName, 3 CoinPrice ,4 TotalSupply, 5 Goal,6 Users, 7Public Share,8 Start ,9 end
     console.log( formElementsArray)
     let tokenName=formElementsArray[1].config.value
     let tokenSymbol=formElementsArray[2].config.value
-    NumParams.push(formElementsArray[5].config.value)
+    NumParams.push(formElementsArray[5].config.value)//total supply
     NumParams.push(formElementsArray[6].config.value)
     NumParams.push(formElementsArray[8].config.value)
-    NumParams.push(formElementsArray[9].config.value)
+    NumParams.push(formElementsArray[9].config.value)//public share
     NumParams.push(1)
     NumParams.push(1)
     NumParams.push(formElementsArray[3].config.value)
     NumParams.push(formElementsArray[0].config.value)
+    partnerShares.push(formElementsArray[4].config.value)
+    partnerShares.push(formElementsArray[7].config.value)
+    
     if(this.state.p1s.length>2){
         console.log(this.state.p1s.length)
     partnerShares.push(this.state.p1s)

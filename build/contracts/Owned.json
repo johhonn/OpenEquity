@@ -58,14 +58,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a031916331790556101f3806100326000396000f30060806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008e575b600080fd5b34801561005c57600080fd5b506100656100d0565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100bc73ffffffffffffffffffffffffffffffffffffffff600435166100ec565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000805473ffffffffffffffffffffffffffffffffffffffff16331461011157600080fd5b73ffffffffffffffffffffffffffffffffffffffff8216151561013357600080fd5b6000546040805173ffffffffffffffffffffffffffffffffffffffff9283168152918416602083015280517f1f8d7d25344642d919d55999e4664aa452a5f424bc0936ceb9c2b300db7dcbd99281900390910190a1506000805473ffffffffffffffffffffffffffffffffffffffff831673ffffffffffffffffffffffffffffffffffffffff1990911617905560019190505600a165627a7a72305820772857365dbfc9c7f8aa4156f75a801ac4e6ce28b41e7086b1b404ed44eb100b0029",
-  "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008e575b600080fd5b34801561005c57600080fd5b506100656100d0565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100bc73ffffffffffffffffffffffffffffffffffffffff600435166100ec565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000805473ffffffffffffffffffffffffffffffffffffffff16331461011157600080fd5b73ffffffffffffffffffffffffffffffffffffffff8216151561013357600080fd5b6000546040805173ffffffffffffffffffffffffffffffffffffffff9283168152918416602083015280517f1f8d7d25344642d919d55999e4664aa452a5f424bc0936ceb9c2b300db7dcbd99281900390910190a1506000805473ffffffffffffffffffffffffffffffffffffffff831673ffffffffffffffffffffffffffffffffffffffff1990911617905560019190505600a165627a7a72305820772857365dbfc9c7f8aa4156f75a801ac4e6ce28b41e7086b1b404ed44eb100b0029",
+  "bytecode": "0x608060405234801561001057600080fd5b5060008054600160a060020a031916331790556101f3806100326000396000f30060806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008e575b600080fd5b34801561005c57600080fd5b506100656100d0565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100bc73ffffffffffffffffffffffffffffffffffffffff600435166100ec565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000805473ffffffffffffffffffffffffffffffffffffffff16331461011157600080fd5b73ffffffffffffffffffffffffffffffffffffffff8216151561013357600080fd5b6000546040805173ffffffffffffffffffffffffffffffffffffffff9283168152918416602083015280517f1f8d7d25344642d919d55999e4664aa452a5f424bc0936ceb9c2b300db7dcbd99281900390910190a1506000805473ffffffffffffffffffffffffffffffffffffffff831673ffffffffffffffffffffffffffffffffffffffff1990911617905560019190505600a165627a7a72305820fcc2dd0fddb916a86558c4acb41cb6a0e161d3650082e6911bf302a60722bc110029",
+  "deployedBytecode": "0x60806040526004361061004b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610050578063a6f9dae11461008e575b600080fd5b34801561005c57600080fd5b506100656100d0565b6040805173ffffffffffffffffffffffffffffffffffffffff9092168252519081900360200190f35b34801561009a57600080fd5b506100bc73ffffffffffffffffffffffffffffffffffffffff600435166100ec565b604080519115158252519081900360200190f35b60005473ffffffffffffffffffffffffffffffffffffffff1681565b6000805473ffffffffffffffffffffffffffffffffffffffff16331461011157600080fd5b73ffffffffffffffffffffffffffffffffffffffff8216151561013357600080fd5b6000546040805173ffffffffffffffffffffffffffffffffffffffff9283168152918416602083015280517f1f8d7d25344642d919d55999e4664aa452a5f424bc0936ceb9c2b300db7dcbd99281900390910190a1506000805473ffffffffffffffffffffffffffffffffffffffff831673ffffffffffffffffffffffffffffffffffffffff1990911617905560019190505600a165627a7a72305820fcc2dd0fddb916a86558c4acb41cb6a0e161d3650082e6911bf302a60722bc110029",
   "sourceMap": "27:445:8:-;;;202:48;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;227:5:8;:18;;-1:-1:-1;;;;;;227:18:8;235:10;227:18;;;27:445;;;;;;",
   "deployedSourceMap": "27:445:8:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;47:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;47:20:8;;;;;;;;;;;;;;;;;;;;;;;254:214;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;254:214:8;;;;;;;;;;;;;;;;;;;;;;;;;47:20;;;;;;:::o;254:214::-;324:12;171:5;;;;157:10;:19;154:32;;178:8;;;154:32;351:13;;;;347:27;;;366:8;;;347:27;396:5;;384:28;;;396:5;;;;384:28;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;422:5:8;:16;;;;;-1:-1:-1;;422:16:8;;;;;;;254:214;;;:::o",
   "source": "pragma solidity ^0.4.15;\n\n\ncontract Owned {\n\n  address public owner;\n\n  event LogNewOwner (address _owner, address newOwner);\n\n  modifier onlyOwner {\n    if(msg.sender != owner) revert();\n    _;\n  }\n\n  function Owned() {\n      owner = msg.sender;\n  }\n\n  function changeOwner (address newOwner)\n      onlyOwner\n      returns(bool success){\n        if (newOwner == 0) revert();\n        LogNewOwner(owner, newOwner);\n        owner = newOwner;\n        return true;\n      }\n  }\n",
-  "sourcePath": "/home/john/Documents/OE/Drizzle Template/contracts/Owned.sol",
+  "sourcePath": "/home/john/Documents/OE/OpenEquity/contracts/Owned.sol",
   "ast": {
-    "absolutePath": "/home/john/Documents/OE/Drizzle Template/contracts/Owned.sol",
+    "absolutePath": "/home/john/Documents/OE/OpenEquity/contracts/Owned.sol",
     "exportedSymbols": {
       "Owned": [
         3884
@@ -773,7 +773,7 @@
     "src": "0:473:8"
   },
   "legacyAST": {
-    "absolutePath": "/home/john/Documents/OE/Drizzle Template/contracts/Owned.sol",
+    "absolutePath": "/home/john/Documents/OE/OpenEquity/contracts/Owned.sol",
     "exportedSymbols": {
       "Owned": [
         3884
@@ -1482,9 +1482,9 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-02-26T18:48:25.640Z"
+  "updatedAt": "2019-03-06T20:04:05.628Z"
 }

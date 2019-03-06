@@ -100,14 +100,14 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x61041f610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600436106100785763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631189dab3811461007d578063595b59d7146100cc5780635ca3b3a514610107578063f6e44b131461013a575b600080fd5b81801561008957600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff602435811690604435906064351661016b565b604080519115158252519081900360200190f35b8180156100d857600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff60243581169060443590606435166101bd565b81801561011357600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610269565b005b81801561014657600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610330565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120805484810391829055906101a68483610269565b6101b08482610330565b5060019695505050505050565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120548190819015156101fb5760058701805460010190555b73ffffffffffffffffffffffffffffffffffffffff861660009081526001880160205260409020805486810190915591506102368483610269565b5073ffffffffffffffffffffffffffffffffffffffff851660009081526001870160205260409020546101b08482610330565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f72656d6f76652875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd5b5050565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f696e736572742875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd00a165627a7a7230582010765f0020438ca9be81f81e5291f245ba32db021d17ab49ff0e094827721fe80029",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106100785763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631189dab3811461007d578063595b59d7146100cc5780635ca3b3a514610107578063f6e44b131461013a575b600080fd5b81801561008957600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff602435811690604435906064351661016b565b604080519115158252519081900360200190f35b8180156100d857600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff60243581169060443590606435166101bd565b81801561011357600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610269565b005b81801561014657600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610330565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120805484810391829055906101a68483610269565b6101b08482610330565b5060019695505050505050565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120548190819015156101fb5760058701805460010190555b73ffffffffffffffffffffffffffffffffffffffff861660009081526001880160205260409020805486810190915591506102368483610269565b5073ffffffffffffffffffffffffffffffffffffffff851660009081526001870160205260409020546101b08482610330565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f72656d6f76652875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd5b5050565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f696e736572742875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd00a165627a7a7230582010765f0020438ca9be81f81e5291f245ba32db021d17ab49ff0e094827721fe80029",
+  "bytecode": "0x61041f610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600436106100785763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631189dab3811461007d578063595b59d7146100cc5780635ca3b3a514610107578063f6e44b131461013a575b600080fd5b81801561008957600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff602435811690604435906064351661016b565b604080519115158252519081900360200190f35b8180156100d857600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff60243581169060443590606435166101bd565b81801561011357600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610269565b005b81801561014657600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610330565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120805484810391829055906101a68483610269565b6101b08482610330565b5060019695505050505050565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120548190819015156101fb5760058701805460010190555b73ffffffffffffffffffffffffffffffffffffffff861660009081526001880160205260409020805486810190915591506102368483610269565b5073ffffffffffffffffffffffffffffffffffffffff851660009081526001870160205260409020546101b08482610330565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f72656d6f76652875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd5b5050565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f696e736572742875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd00a165627a7a72305820d8703c749fd25911ff74a78769db705efba6ca5561576c1b7a279e61233b89060029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106100785763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631189dab3811461007d578063595b59d7146100cc5780635ca3b3a514610107578063f6e44b131461013a575b600080fd5b81801561008957600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff602435811690604435906064351661016b565b604080519115158252519081900360200190f35b8180156100d857600080fd5b506100b860043573ffffffffffffffffffffffffffffffffffffffff60243581169060443590606435166101bd565b81801561011357600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610269565b005b81801561014657600080fd5b5061013873ffffffffffffffffffffffffffffffffffffffff60043516602435610330565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120805484810391829055906101a68483610269565b6101b08482610330565b5060019695505050505050565b73ffffffffffffffffffffffffffffffffffffffff831660009081526001850160205260408120548190819015156101fb5760058701805460010190555b73ffffffffffffffffffffffffffffffffffffffff861660009081526001880160205260409020805486810190915591506102368483610269565b5073ffffffffffffffffffffffffffffffffffffffff851660009081526001870160205260409020546101b08482610330565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f72656d6f76652875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd5b5050565b8173ffffffffffffffffffffffffffffffffffffffff1660405180807f696e736572742875696e74323536290000000000000000000000000000000000815250600f01905060405180910390207c01000000000000000000000000000000000000000000000000000000009004826040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808281526020019150506000604051808303816000875af192505050151561032c57600080fd00a165627a7a72305820d8703c749fd25911ff74a78769db705efba6ca5561576c1b7a279e61233b89060029",
   "sourceMap": "0:1819:4:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
   "deployedSourceMap": "0:1819:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1132:440;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1132:440:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;577:552;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;577:552:4;;;;;;;;;;;;;;;;;1698:118;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1698:118:4;;;;;;;;;;;1576;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1576:118:4;;;;;;;;;1132:440;1274:31;;;1243:4;1274:31;;;:21;;;:31;;;;;;;1314:38;;;;;;;1274:31;1411:38;1422:14;1274:31;1411:10;:38::i;:::-;1458:31;1469:14;1484:4;1458:10;:31::i;:::-;-1:-1:-1;1562:4:4;;1132:440;-1:-1:-1;;;;;;1132:440:4:o;577:552::-;701:31;;;686:4;701:31;;;:21;;;:31;;;;;;686:4;;;;701:34;698:78;;;745:21;;;:24;;768:1;745:24;;;698:78;799:31;;;;;;;:21;;;:31;;;;;;;837:38;;;;;;799:31;-1:-1:-1;925:38:4;936:14;799:31;925:10;:38::i;:::-;-1:-1:-1;981:31:4;;;;;;;:21;;;:31;;;;;;1019;1030:14;981:31;1019:10;:31::i;1698:118::-;1749:1;:6;;1763:28;;;;;;;;;;;;;;;;;;;1749:51;;;1793:5;1749:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1748:52;1745:65;;;1802:8;;;1745:65;1698:118;;:::o;1576:::-;1627:1;:6;;1641:28;;;;;;;;;;;;;;;;;;;1627:51;;;1671:5;1627:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1626:52;1623:65;;;1680:8;;",
   "source": "library CoinQueueLib2 {\n  //using OrderedStatisticTree for OrderedStatisticTree.Index;\n\n  struct CoinQueue {\n\n  \t\t//bytes32 id;\n\n   \t  mapping(address=>uint) insertOrder;\n\t    mapping(address=>uint) customerBalance;\n\t    mapping(uint=>address) balanceTocustomer;\n  //  mapping(address=>uint) positions;\n      uint greatestCustomerPurchase;\n      address firstInLine;\n\t    uint numbercustomers;\n\n\t}\n\tfunction createQueue()\n    internal\n    returns (CoinQueue)\n  {\n    return CoinQueue({\n      numbercustomers:0,firstInLine:0x3,greatestCustomerPurchase:0\n\n          });\n  }\n\n\n\n\n\tfunction insertcustomer(CoinQueue storage queue,address customer,uint value,address StatisticsTree) returns (bool){\n    \tif(queue.customerBalance[customer]==0){\n    \t  queue.numbercustomers+=1;\n \t\t }\n\t    uint prevBalance=queue.customerBalance[customer];\n\t    queue.customerBalance[customer]+=value;\n\t  // customerValues.remove(prevBalance);\n      CallRemove(StatisticsTree,prevBalance);\n      uint temp=queue.customerBalance[customer];\n\t    CallInsert(StatisticsTree,temp);\n\t  // positions[customer]=customerValues.rank(value);\n\n        return true;\n}\n  function customerWithdraw(CoinQueue storage queue,address customer, uint value,address StatisticsTree) returns(bool){\n       uint prevBalance=queue.customerBalance[customer];\n       queue.customerBalance[customer]-=value;\n       uint temp=queue.customerBalance[customer];\n       CallRemove(StatisticsTree,prevBalance);\n       CallInsert(StatisticsTree,temp);\n       //positions[customer]=customerValues.rank(value);\n       return true;\n\t\t }\n\t\t function CallInsert(address c,uint value){\n\t\t\t if(!c.call(bytes4(keccak256(\"insert(uint256)\")),value )) revert();\n\t\t }\n\t\t function CallRemove(address c,uint value){\n\t \t\tif(!c.call(bytes4(keccak256(\"remove(uint256)\")),value )) revert();\n\t \t}\n\n}\n",
-  "sourcePath": "/home/john/Documents/OE/Drizzle Template/contracts/CoinQueueLib2.sol",
+  "sourcePath": "/home/john/Documents/OE/OpenEquity/contracts/CoinQueueLib2.sol",
   "ast": {
-    "absolutePath": "/home/john/Documents/OE/Drizzle Template/contracts/CoinQueueLib2.sol",
+    "absolutePath": "/home/john/Documents/OE/OpenEquity/contracts/CoinQueueLib2.sol",
     "exportedSymbols": {
       "CoinQueueLib2": [
         1472
@@ -1958,7 +1958,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2317,
+                                "referencedDeclaration": 4346,
                                 "src": "1641:9:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -2099,10 +2099,10 @@
                         "name": "revert",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
-                          2328,
-                          2329
+                          4357,
+                          4358
                         ],
-                        "referencedDeclaration": 2328,
+                        "referencedDeclaration": 4357,
                         "src": "1680:6:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_revert_pure$__$returns$__$",
@@ -2267,7 +2267,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2317,
+                                "referencedDeclaration": 4346,
                                 "src": "1763:9:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -2408,10 +2408,10 @@
                         "name": "revert",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
-                          2328,
-                          2329
+                          4357,
+                          4358
                         ],
-                        "referencedDeclaration": 2328,
+                        "referencedDeclaration": 4357,
                         "src": "1802:6:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_revert_pure$__$returns$__$",
@@ -2527,7 +2527,7 @@
     "src": "0:1820:4"
   },
   "legacyAST": {
-    "absolutePath": "/home/john/Documents/OE/Drizzle Template/contracts/CoinQueueLib2.sol",
+    "absolutePath": "/home/john/Documents/OE/OpenEquity/contracts/CoinQueueLib2.sol",
     "exportedSymbols": {
       "CoinQueueLib2": [
         1472
@@ -4378,7 +4378,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2317,
+                                "referencedDeclaration": 4346,
                                 "src": "1641:9:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -4519,10 +4519,10 @@
                         "name": "revert",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
-                          2328,
-                          2329
+                          4357,
+                          4358
                         ],
-                        "referencedDeclaration": 2328,
+                        "referencedDeclaration": 4357,
                         "src": "1680:6:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_revert_pure$__$returns$__$",
@@ -4687,7 +4687,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 2317,
+                                "referencedDeclaration": 4346,
                                 "src": "1763:9:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -4828,10 +4828,10 @@
                         "name": "revert",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [
-                          2328,
-                          2329
+                          4357,
+                          4358
                         ],
-                        "referencedDeclaration": 2328,
+                        "referencedDeclaration": 4357,
                         "src": "1802:6:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_revert_pure$__$returns$__$",
@@ -4948,16 +4948,16 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+    "version": "0.4.25+commit.59dbf8f1.Emscripten.clang"
   },
   "networks": {
     "4447": {
       "events": {},
       "links": {},
-      "address": "0xde5491f774f0cb009abcea7326342e105dbb1b2e",
-      "transactionHash": "0x519839f2d2f40b7e4aceeedbcd9e260994e1d13fc1936fdf538ee4722547fb3d"
+      "address": "0xf25186b5081ff5ce73482ad761db0eb0d25abfbf",
+      "transactionHash": "0x35d79a87e0f514b78d5d827cba9cdab7953b8efa4c766d7be3cee3257f8b36e7"
     }
   },
   "schemaVersion": "2.0.2",
-  "updatedAt": "2019-02-26T18:48:25.633Z"
+  "updatedAt": "2019-03-06T20:04:05.623Z"
 }

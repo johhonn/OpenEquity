@@ -4,7 +4,7 @@ import Dashboard from "@material-ui/icons/Dashboard";
 import Assignment from "@material-ui/icons/Assignment";
 // core components/views
 
-import ProfileContainer from "../views/Profile/ProfileContainer";
+
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 
 import HistoryContainer from "../views/History/HistoryContainer";
