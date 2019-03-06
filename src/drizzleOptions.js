@@ -6,16 +6,14 @@ const drizzleOptions = {
     block: false,
     fallback: {
       type: 'ws',
-      url: 'ws://127.0.0.1:8545'
+      url: 'ws://127.0.0.1:9545'
     }
   },
   contracts: [CoinDeployer,Coin],
   events: {
-  
+    CoinDeployer: ['CoinCreation'],
   },
-  polls: {
-    accounts: 1500
-  }
+  polls: {}
 }
 
 export default drizzleOptions

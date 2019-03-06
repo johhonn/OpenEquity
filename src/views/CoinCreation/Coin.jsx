@@ -30,7 +30,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'enter decimal uints'
         },
-        value: ''
+        value: 10
     },
     CoinSymbol: { 
         elementType: 'input',
@@ -39,7 +39,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'enter symbol'
         },
-        value: ''
+        value: 'TS'
     },
     CoinName: {
         elementType: 'input',
@@ -48,7 +48,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'coin name'
         },
-        value: ''
+        value: 'Test'
     },
     CoinPrice: {
         elementType: 'input',
@@ -57,7 +57,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'coin price'
         },
-        value: ''
+        value:1000
     },
     TotalSupply: {
         elementType: 'input',
@@ -66,7 +66,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'total coin supply'
         },
-        value: ''
+        value: 100000
     },
     FundingGoal: {
         elementType: 'input',
@@ -75,7 +75,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'Funding Goal'
         },
-        value: ''
+        value: 1000000000
     },
    UserstoAdmit: {
         elementType: 'input',
@@ -84,7 +84,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'Enter total Users'
         },
-        value: ''
+        value: 100
     },
     PublicShare: {
         elementType: 'input',
@@ -93,7 +93,7 @@ parametersSet:false,
             type: 'text',
             placeholder: 'enter public share percentage'
         },
-        value: ''
+        value: 10000
     },
     StartDate: {
         elementType: 'date',
@@ -102,7 +102,8 @@ parametersSet:false,
             type: 'text',
             placeholder: ''
         },
-        value: ''
+        value: '',
+        display:''
     },
     EndDate: {
       elementType: 'date',
@@ -111,7 +112,8 @@ parametersSet:false,
           type: 'text',
           placeholder: ''
       },
-      value: ''
+      value: '',
+      display:''
     }
   
      
@@ -158,7 +160,7 @@ handleChange = (fieldName, event) => {
 
 inputChangedHandler = (event, inputIdentifier,inputType) => {
     console.log(inputIdentifier)
-    
+    console.log(event)
     console.log(inputType)
   const updatedOrderForm = {
       ...this.state.orderForm
@@ -168,13 +170,13 @@ inputChangedHandler = (event, inputIdentifier,inputType) => {
   };
   
   if(inputType=='date'){
-    //console.log()
-    console.log(event)
-    let event=moment(event).unix()
+    let display=event
+    let unix=moment(event).format('X')
      
-    console.log(moment(event).unix())
+   
     
-    updatedFormElement.value=event
+    updatedFormElement.value=display
+    updatedFormElement.display=unix
     updatedOrderForm[inputIdentifier] = updatedFormElement;
     this.setState({orderForm: updatedOrderForm});
     
@@ -219,8 +221,8 @@ handleSubmit2=()=>{
     let tokenSymbol=formElementsArray[2].config.value
     NumParams.push(formElementsArray[5].config.value)//total supply
     NumParams.push(formElementsArray[6].config.value)
-    NumParams.push(formElementsArray[8].config.value)
-    NumParams.push(formElementsArray[9].config.value)//public share
+    NumParams.push(formElementsArray[8].config.display)//start
+    NumParams.push(formElementsArray[9].config.display)//end
     NumParams.push(1)
     NumParams.push(1)
     NumParams.push(formElementsArray[3].config.value)
