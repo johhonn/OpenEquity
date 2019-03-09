@@ -2,20 +2,23 @@ import React,{Component} from 'react';
 
 import PropTypes from "prop-types";
 import withStyles from "@material-ui/core/styles/withStyles";
-// core components
-import Button from "../../components/CustomButtons/Button";
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
+// core components
+// import Button from "../../components/CustomButtons/Button";
 import Input from "../input/Input"
 import moment from 'moment'
 
-
-
 class Coin extends Component {
-    constructor(props, context) {
-        super(props)
-    console.log(props)
-      
-        
+  constructor(props, context) {
+      super(props)
+      console.log(props)
+
 this.state={
 accounts:props.accounts[0],
 web3:'',
@@ -32,7 +35,7 @@ parametersSet:false,
         },
         value: 10
     },
-    CoinSymbol: { 
+    CoinSymbol: {
         elementType: 'input',
         label: 'symbol',
         elementConfig: {
@@ -115,8 +118,8 @@ parametersSet:false,
       value: '',
       display:''
     }
-  
-     
+
+
 
 },
 
@@ -134,17 +137,15 @@ p3s:'',
 p4s:'',
 p5s:''
 
-}  
-
 }
-  
+}
 
 
-componentWillMount(){
+
+componentWillMount () {
   console.log(this.props)
   console.log(this.context)
-   
-  }
+}
 
 
 
@@ -165,27 +166,27 @@ inputChangedHandler = (event, inputIdentifier,inputType) => {
   const updatedOrderForm = {
       ...this.state.orderForm
   };
-  const updatedFormElement = { 
+  const updatedFormElement = {
       ...updatedOrderForm[inputIdentifier]
   };
-  
+
   if(inputType=='date'){
     let display=event
     let unix=moment(event).format('X')
-     
-   
-    
+
+
+
     updatedFormElement.value=display
     updatedFormElement.display=unix
     updatedOrderForm[inputIdentifier] = updatedFormElement;
     this.setState({orderForm: updatedOrderForm});
-    
+
   }else{
   updatedFormElement.value = event.target.value;
   updatedOrderForm[inputIdentifier] = updatedFormElement;
   console.log(event.target.value)
   this.setState({orderForm: updatedOrderForm},console.log(this.state));
-  } 
+  }
 }
 handleSubmit2=()=>{
     const formElementsArray = [];
@@ -193,7 +194,7 @@ handleSubmit2=()=>{
     const partnerShares=[]
     const NumParams=[]
     const author=this.state.accounts
-    
+
     if(this.state.partner1.length>1){
     partnerArray.push(this.state.partner1)
     }
@@ -229,7 +230,7 @@ handleSubmit2=()=>{
     NumParams.push(formElementsArray[0].config.value)
     partnerShares.push(formElementsArray[4].config.value)
     partnerShares.push(formElementsArray[7].config.value)
-    
+
     if(this.state.p1s.length>2){
         console.log(this.state.p1s.length)
     partnerShares.push(this.state.p1s)
@@ -255,8 +256,8 @@ handleSubmit2=()=>{
     const stackId = this.state.contracts.CoinDeployer.methods.deployCoin(author,tokenName,tokenSymbol,partnerShares,NumParams,partnerArray).send({
         from: this.state.accounts
       });
-  
-     
+
+
     //uint goal	numParams[0];
       //uint eligibleCount numParams[1];
 	    //uint startdate numParams[2];
@@ -269,16 +270,9 @@ handleSubmit2=()=>{
        }
  handleSubmit=()=>{
     this.setState({parametersSet:true})
- }     
-    
-    
+ }
 
-
-
-render(){
-   var display=null
-   
-  
+render () {
     const formElementsArray = [];
     for (let key in this.state.orderForm) {
       formElementsArray.push({
@@ -286,82 +280,71 @@ render(){
           config: this.state.orderForm[key]
       });
     }
-    if(this.state.parametersSet==false){
-    let form = (
-      <form >
-          {formElementsArray.map(formElement => (
-              <Input 
-                  key={formElement.id}
-                  elementType={formElement.config.elementType}
-                  elementConfig={formElement.config.elementConfig}
-                  value={formElement.config.value}
-                  label={formElement.config.label}
-                  changed={(event) => this.inputChangedHandler(event, formElement.id,formElement.config.elementType)} />
-          ))}
-          
-      </form>
-     
-    );
-    display=(
+    const parametersForm =
+      <React.Fragment>
+        <Typography variant="display1" gutterBottom>
+          Token Parameters
+        </Typography>
+        <form >
+            {formElementsArray.map(formElement => (
+                <Input
+                    key={formElement.id}
+                    elementType={formElement.config.elementType}
+                    elementConfig={formElement.config.elementConfig}
+                    value={formElement.config.value}
+                    label={formElement.config.label}
+                    changed={(event) => this.inputChangedHandler(event, formElement.id,formElement.config.elementType)} />
+            ))}
+        </form>
+      </React.Fragment>
+    const tokenPartnersForm =
         <div>
-            
-                {form}
-               
-                
-            <Button size="lg" color="primary" onClick={this.handleSubmit}>Set Parameters</Button>
-        </div>
-    )
-    }
-    else{
-        display=(
-            <div>
-                <h1>Add Token Partners</h1>
-                <form action="/action_page.php">
-                <label>Partner 1:</label>
-               <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner1')}></input>
-               <input type="text"style={{margin:"5px"}} placeholder="enter share"  onChange={this.handleChange.bind(this,'p1s')}></input> 
-               <br></br>
-               <label>Partner 2:</label>
-               <input type="text" style={{margin:"5px"}}  placeholder="enter address" onChange={this.handleChange.bind(this,'partner2')}></input>
-               <input type="text"style={{margin:"5px"}} placeholder="enter share" onChange={this.handleChange.bind(this,'p2s')}></input> 
-               <br></br>
-               <label>Partner 3:</label>
-               <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner3')}></input>
-               <input type="text"style={{margin:"5px"}}  placeholder="enter share" onChange={this.handleChange.bind(this,'p3s')}></input> 
-               <br></br>
-               <label>Partner 4:</label>
-               <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner4')}></input>
-               <input type="text"style={{margin:"5px"}} placeholder="enter share" onChange={this.handleChange.bind(this,'p4s')}></input> 
-               <br></br>
-               <label>Partner 5:</label>
-               <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner5')}></input>
-               <input type="text"style={{margin:"5px"}} placeholder="enter share" onChange={this.handleChange.bind(this,'p5s')}></input> 
-               <br></br>
-                </form>    
-                <Button size="lg" color="primary" onClick={this.handleSubmit2}>Mint Coin</Button>
-            </div>
-        )
-        
-    }
-
-
-return(
-<div style={{backgroundColor: "#8FCC93",borderRadius: "5px",padding:"25px"}}>{display}</div>
-
-  
-);
-
-
-
-
-
-
-
-   
-   
+            <Typography variant="display1" gutterBottom>
+              Token Partners
+            </Typography>
+            <form action="/action_page.php">
+            <label>Partner 1:</label>
+           <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner1')}></input>
+           <input type="text"style={{margin:"5px"}} placeholder="enter share"  onChange={this.handleChange.bind(this,'p1s')}></input>
+           <br></br>
+           <label>Partner 2:</label>
+           <input type="text" style={{margin:"5px"}}  placeholder="enter address" onChange={this.handleChange.bind(this,'partner2')}></input>
+           <input type="text"style={{margin:"5px"}} placeholder="enter share" onChange={this.handleChange.bind(this,'p2s')}></input>
+           <br></br>
+           <label>Partner 3:</label>
+           <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner3')}></input>
+           <input type="text"style={{margin:"5px"}}  placeholder="enter share" onChange={this.handleChange.bind(this,'p3s')}></input>
+           <br></br>
+           <label>Partner 4:</label>
+           <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner4')}></input>
+           <input type="text"style={{margin:"5px"}} placeholder="enter share" onChange={this.handleChange.bind(this,'p4s')}></input>
+           <br></br>
+           <label>Partner 5:</label>
+           <input type="text" style={{margin:"5px"}} placeholder="enter address" onChange={this.handleChange.bind(this,'partner5')}></input>
+           <input type="text"style={{margin:"5px"}} placeholder="enter share" onChange={this.handleChange.bind(this,'p5s')}></input>
+           <br></br>
+            </form>
+        </div>;
+    return (
+      <Card>
+        <CardContent>
+          <Grid container spacing={16}>
+            <Grid item xs={12} sm={6}>
+              {parametersForm}
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              {tokenPartnersForm}
+            </Grid>
+          </Grid>
+        </CardContent>
+        <CardActions>
+          <Button variant="contained" color="primary" onClick={this.handleSubmit2}>Mint Coin</Button>
+        </CardActions>
+      </Card>
+    );
+  }
 }
-}   
 Coin.contextTypes = {
     drizzle: PropTypes.object
   }
-export default Coin;
+export default withStyles()(Coin);
