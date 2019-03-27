@@ -6,8 +6,8 @@ import "./Coin.sol";
 
 contract CoinDeployer{
 
-mapping(uint=>address) deployedAddresses;
-mapping(address=>uint[]) CoinIDs;
+mapping(uint=>address) public deployedAddresses;
+mapping(address=>uint[] )public  CoinIDs;
 uint CoinID;
 address TreeDeploy;
 address[] _PartnerArray;
@@ -42,6 +42,9 @@ function deployCoin(
 
 function getCoinLocation(uint coin) constant returns(address){
   return deployedAddresses[coin];
+}
+function myCoins(address a) constant returns(uint[]){
+  return CoinIDs[a];
 }
 
 

@@ -135,8 +135,8 @@ p1s:'',
 p2s:'',
 p3s:'',
 p4s:'',
-p5s:''
-
+p5s:'',
+event:''
 }
 }
 
@@ -145,6 +145,8 @@ p5s:''
 componentWillMount () {
   console.log(this.props)
   console.log(this.context)
+  console.log(this.context.drizzle.contracts.CoinDeployer.events)
+  this.setState({events:this.context.drizzle.contracts.CoinDeployer.events.CoinCreation})
 }
 
 
@@ -188,7 +190,7 @@ inputChangedHandler = (event, inputIdentifier,inputType) => {
   this.setState({orderForm: updatedOrderForm},console.log(this.state));
   }
 }
-handleSubmit2=()=>{
+handleSubmit2= async()=>{
     const formElementsArray = [];
     const partnerArray=[]
     const partnerShares=[]
@@ -228,8 +230,10 @@ handleSubmit2=()=>{
     NumParams.push(1)
     NumParams.push(formElementsArray[3].config.value)
     NumParams.push(formElementsArray[0].config.value)
-    partnerShares.push(formElementsArray[4].config.value)
-    partnerShares.push(formElementsArray[7].config.value)
+    let Decimal=formElementsArray[0].config.value
+    console.log(Decimal)
+    partnerShares.push(formElementsArray[4].config.value*10**Decimal)
+    partnerShares.push(formElementsArray[7].config.value*10**Decimal)
 
     if(this.state.p1s.length>2){
         console.log(this.state.p1s.length)
@@ -248,16 +252,17 @@ handleSubmit2=()=>{
     if(this.state.p5s.length>2){
     partnerShares.push(this.state.p5s)
     }
-    console.log(partnerArray)
+    console.log(partnerShares)
     console.log(NumParams)
     console.log(tokenName)
     console.log(tokenSymbol)
     console.log(this.state.contracts.CoinDeployer.methods.deployCoin)
-    const stackId = this.state.contracts.CoinDeployer.methods.deployCoin(author,tokenName,tokenSymbol,partnerShares,NumParams,partnerArray).send({
+    const stackId =await this.state.contracts.CoinDeployer.methods.deployCoin(author,tokenName,tokenSymbol,partnerShares,NumParams,partnerArray).send({
         from: this.state.accounts
       });
-
-
+      
+      console.log(stackId)
+      console.log(await this.state.contracts.CoinDeployer.methods.getCoinLocation(1).call())
     //uint goal	numParams[0];
       //uint eligibleCount numParams[1];
 	    //uint startdate numParams[2];
@@ -328,11 +333,11 @@ render () {
     return (
       <Card>
         <CardContent>
-          <Grid container spacing={16}>
-            <Grid item xs={12} sm={6}>
+          <Grid container spacing={0}>
+            <Grid item xs={0} sm={6} style={{background:'white'}} >
               {parametersForm}
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={6} sm={6}>
               {tokenPartnersForm}
             </Grid>
           </Grid>
